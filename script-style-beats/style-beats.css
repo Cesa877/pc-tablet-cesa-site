@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #242424;
+    user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6, td {
+    text-shadow: 0 5px 5px black;
+}
+
+nav {
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+}
+
+nav h1 {
+    color: white;
+}
+
+nav #tt img {
+    height: 2vw;
+    right: 0;   
+    position: absolute;
+    margin: 0;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    margin-right: 6vw;
+}
+
+nav #tt img:hover {
+    height: 2.3vw;
+    transition: 0.3s;
+    filter: drop-shadow(10px 20px 5px rgba(255, 255, 255, 0.5));
+}
+
+nav #ds img {
+    height: 3.5vw;
+    right: 0;   
+    position: absolute;
+    margin: 0;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+nav #ds img:hover {
+    height: 3.8vw;
+    transition: 0.3s;
+    filter: drop-shadow(10px 20px 5px rgba(255, 255, 255, 0.5));
+}
+
+nav #ig img {
+    height: 2vw;
+    right: 0;   
+    position: absolute;
+    margin: 0;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    margin-right: 3.8vw;
+}
+
+nav #ig img:hover {
+    height: 2.3vw;
+    transition: 0.3s;
+    filter: drop-shadow(10px 20px 5px rgba(255, 255, 255, 0.5));
+}
+
+#logo {
+    height: 5vw;
+    left: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    background-color: black;
+}
+
+#table {
+    margin-top: 1vw;
+    position: relative;
+    z-index: 1;
+}
+
+table #title2, #title5 {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0.5vw;
+    color: #242424;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid red;
+}
+
+table #title1, #title4 {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0.5vw;
+    color: #242424;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid red;
+    transform: translateX(-0.5vw);
+}
+
+table #title3, #title6 {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0.5vw;
+    color: #242424;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid red;
+    transform: translateX(0.5vw);
+}
+
+table #audioleft {
+    transform: translateX(-0.5vw);
+}
+
+table #audioright {
+    transform: translateX(0.5vw);
+}
+
+table audio {
+    margin-bottom: 2vw;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
