@@ -1,4 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const toggleSwitch = document.getElementById('switch');
+    const themeLink = document.getElementById('theme-link');
+    let currentTheme = 'dark';
+
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            themeLink.setAttribute('href', 'style-beats-bianco.css');
+            toggleSwitch.checked = true;
+            currentTheme = 'light';
+        } else {
+            themeLink.setAttribute('href', 'style-beats-nero.css');
+            toggleSwitch.checked = false;
+            currentTheme = 'dark';
+        }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    }
+
+    toggleSwitch.addEventListener('change', () => {
+        if (toggleSwitch.checked) {
+            applyTheme('light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            applyTheme('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
     const canvasVisualizer = document.getElementById('visualizer');
     const ctxVisualizer = canvasVisualizer.getContext('2d');
     canvasVisualizer.width = window.innerWidth;
@@ -18,9 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
         constructor() {
             this.x = Math.random() * canvasParticles.width;
             this.y = Math.random() * canvasParticles.height;
-            this.size = Math.random() * 3 + 1; // Particelle più piccole
-            this.speedX = (Math.random() * 1.5 - 0.75) * 0.5; // Movimento più lento
-            this.speedY = (Math.random() * 1.5 - 0.75) * 0.5; // Movimento più lento
+            this.size = Math.random() * 3 + 1;
+            this.speedX = (Math.random() * 1.5 - 0.75) * 0.5;
+            this.speedY = (Math.random() * 1.5 - 0.75) * 0.5;
         }
 
         update() {
@@ -37,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         draw() {
-            ctxParticles.fillStyle = 'rgba(255, 255, 255, 0.2)'; // Più trasparenti
+            ctxParticles.fillStyle = currentTheme === 'light' ? 'rgba(0, 0, 0, 0.2)' : 'rgba(255, 255, 255, 0.2)';
             ctxParticles.beginPath();
             ctxParticles.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctxParticles.closePath();
@@ -87,16 +118,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 ctxVisualizer.clearRect(0, 0, canvasVisualizer.width, canvasVisualizer.height);
                 analyzer.getByteFrequencyData(dataArray);
 
-                const barWidth = (canvasVisualizer.width / bufferLength) * 1.5; // Barre leggermente più strette
+                const barWidth = (canvasVisualizer.width / bufferLength) * 1.5;
                 let barHeight;
                 let x = 0;
 
                 for (let i = 0; i < bufferLength; i++) {
-                    barHeight = dataArray[i] * 1.5; // Le barre arrivano più in alto
+                    barHeight = dataArray[i] * 1.5;
 
-                    const gradient = ctxVisualizer.createLinearGradient(0, 0, 0, canvasVisualizer.height);
-                    gradient.addColorStop(0, 'rgba(255, 255, 255, 1)'); // Colore pieno alla base
-                    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)'); // Colore dissolto in cima
+                    let gradient;
+                    if (currentTheme === 'light') {
+                        gradient = ctxVisualizer.createLinearGradient(0, 0, 0, canvasVisualizer.height);
+                        gradient.addColorStop(0, 'rgba(0, 0, 0, 1)');
+                        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                    } else {
+                        gradient = ctxVisualizer.createLinearGradient(0, 0, 0, canvasVisualizer.height);
+                        gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+                        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                    }
 
                     ctxVisualizer.fillStyle = gradient;
                     ctxVisualizer.fillRect(x, canvasVisualizer.height - barHeight, barWidth, barHeight);
@@ -114,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function() {
             function updateShadows() {
                 analyzer.getByteFrequencyData(dataArray);
 
-                // Consideriamo solo gli alti e i medi (escludiamo i bassi)
                 const highAndMidData = dataArray.slice(bufferLength / 2);
                 const lowData = dataArray.slice(0, bufferLength / 2);
                 const maxHighAndMidValue = Math.max(...highAndMidData);

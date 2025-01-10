@@ -667,3 +667,11 @@ nav .ds:hover{
     border-bottom: 2px solid white;
     box-shadow: 0 10px 10px -5px white;
 }
+
+#advise{
+    color: white;
+    position: absolute;
+    right: 0;
+    font-size: 0.8vw;
+    margin-right: 1vw;
+}

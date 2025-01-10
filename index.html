@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-nero.css" id="theme-link">
     <link rel="icon" href="images-pc/Icon.ico" type="image/x-icon">
     <title>Siti PC-tablet</title>
 </head>
@@ -14,12 +14,19 @@
             <a href="PC.html" id="pc"><strong>Build PC</strong></a>
             <a href="Social.html" id="social"><strong>Social</strong></a>
             <a href="beats.html" id="beats"><strong>Beats</strong></a>
+            <div id="toggle-container">
+                <input type="checkbox" id="switch" name="theme" />
+                <label for="switch">
+                    <span class="moon">🌞</span>
+                    <span class="sun">🌜</span>
+                </label>
+            </div>
         </nav>
     </header>
     <div id="info">
         <div align="center">
             <h1 id="title">Benvenuto!</h1>
-            <h2>Grazie di essere qui.
+            <h2>Grazie per essere qui.
                 <br>Su questo sito troverai tutte le mie pagine web che sono attualmente attive.
                 <br>Scegliere la pagina web interessata cliccando su uno dei bottoni.
                 <br>(Il sito verrà aggiornato periodicamente)
@@ -35,5 +42,6 @@
             </h2>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

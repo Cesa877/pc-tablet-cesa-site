@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-social.css">
+    <link rel="stylesheet" href="style-social-nero.css" id="theme-link">
     <link rel="icon" href="images-social/Icon.ico" type="image/x-icon">
     <title>Social</title>
 </head>
@@ -12,10 +12,22 @@
         <nav>
             <a href="index.html"><img src="images-social/Logo.jpeg" alt="Logo" class="logo"></a>
             <img src="images-social/Senza titolo-1.jpg" alt="TikTube" class="tiktube">
+            <div id="toggle-container">
+                <input type="checkbox" id="switch" name="theme" />
+                <label for="switch">
+                    <span class="moon">🌞</span>
+                    <span class="sun">🌜</span>
+                </label>
+            </div>
         </nav>
     </header>
     <h1 align="center" class="socialtok">TikTok</h1>
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ytskyplayofficial" data-unique-id="ytskyplayofficial" data-embed-type="creator" style="max-width: 780px; min-width: 288px; border-radius: 10px; transform: translateY(-4vw);" > <section> <a target="_blank" href="https://www.tiktok.com/@ytskyplayofficial?refer=creator_embed">@ytskyplayofficial</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ytskyplayofficial" data-unique-id="ytskyplayofficial" data-embed-type="creator" style="max-width: 780px; min-width: 288px; border-radius: 10px; transform: translateY(-4vw);"> 
+        <section> 
+            <a target="_blank" href="https://www.tiktok.com/@ytskyplayofficial?refer=creator_embed">@ytskyplayofficial</a> 
+        </section> 
+    </blockquote> 
+    <script async src="https://www.tiktok.com/embed.js"></script>
     <div class="container">
         <div class="info-ita" style="transform: translateY(-4vw);">
             <h2>Se non carica l'anteprima del profilo TikTok <a href="https://www.tiktok.com/@ytskyplayofficial" id="tikton" target="_blank">clicca qui</a></h2>
@@ -41,5 +53,6 @@
                 </div>
             </div>
         </div>
+    <script src="script-social.js"></script>
 </body>
 </html>

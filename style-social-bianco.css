@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-body{
+body {
     margin: 0;
     font-family: 'Comfortaa', sans-serif;
     user-select: none;
-    background-color: #242424;
+    background-color: white;
+    color: black;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-h1{
+h1 {
     font-size: 2.604vw;
-    color: white;
+    color: black;
 }
 
-nav{
-    background-color: #151515;
+nav {
+    background-color: #f8f9fa;
     height: 5vw;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 nav .logo {
@@ -33,105 +35,105 @@ nav .logo {
     border-radius: 10px;
 }
 
-.button{
+.button {
     text-decoration: none;
-    color: white;
+    color: black;
     margin-left: 15px;
-    border: 0.156vw solid white;
+    border: 0.156vw solid black;
     border-radius: 10px;
     padding: 5px 5px 5px;
     font-size: 2.604vw;
 }
 
-.tiktube{
+.tiktube {
     width: 9vw;
     height: auto;
 }
 
-.title{
+.title {
     font-size: 2.604vw;
     text-align: center;
 }
 
-.info-ita, .info-eng{
+.info-ita, .info-eng {
     width: 50%;
-    border-bottom: 2px solid white;
-    border-top: 2px solid white;
-    color: white;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    color: black;
     border-radius: 5px;
 }
 
-.info-eng{
-    border-left: 0.052vw solid white;
+.info-eng {
+    border-left: 0.052vw solid black;
 }
 
-.info-ita{
-    border-right: 0.052vw solid white;
+.info-ita {
+    border-right: 0.052vw solid black;
 }
 
-.info-ita h2{
+.info-ita h2 {
     font-size: 1.563vw;
     text-align: center;
 }
 
-.info-ita h2 p{
+.info-ita h2 p {
     font-size: 1.042vw;
 }
 
-.info-eng h2{
+.info-eng h2 {
     font-size: 1.563vw;
     text-align: center;
 }
 
-.info-eng h2 p{
+.info-eng h2 p {
     font-size: 1.042vw;
 }
 
-.container{
+.container {
     display: flex;
     transform: translateY(10px);
 }
 
-.ytlogo{
+.ytlogo {
     width: 5.208vw;
 }
 
-.tiktoklogo{
+.tiktoklogo {
     width: 4.167vw;
     margin-left: 15px;
     border-radius: 10px;
 }
 
-#tikton{
+#tikton {
     color: #00FFFF;
     transition-duration: 0.5s;
 }
 
-#tikton:hover{
+#tikton:hover {
     color: blueviolet;
     transition-duration: 0.5s;
     text-shadow: 0px 0px 20px blueviolet;
 }
 
-.socialtok{
+.socialtok {
     background: linear-gradient(-60deg, #f7004d 50%, #00FFFF 50%);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 4vw;
-    transform: translateY(-2vw)
+    transform: translateY(-2vw);
 }
 
-.socialyt{
-    background: linear-gradient(-60deg, white 50%, red 50%);
+.socialyt {
+    background: linear-gradient(-60deg, black 50%, red 50%);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 4vw;
 }
 
-.butube{
-    color: white;
+.butube {
+    color: black;
     background-color: red;
-    border: 0.156vw solid #242424;
+    border: 0.156vw solid white;
     text-decoration: none;
     padding: 5px 5px 5px;
     font-size: 1.9vw;
@@ -140,7 +142,7 @@ nav .logo {
     transform: translateX(1vw) translateY(-2vw);
 }
 
-.butube:hover{
+.butube:hover {
     border: 0.156vw solid red;
     transition-duration: 0.5s;
     box-shadow: 0px 0px 20px red;
@@ -148,21 +150,21 @@ nav .logo {
     text-shadow: 0px 0px 5px white;
 }
 
-.logoyt{
+.logoyt {
     height: 2.9vw;
     width: auto;
     margin-right: 0.521vw;
     transform: translateX(1vw) translateY(-2vw);
 }
 
-.buttonzone{
+.buttonzone {
     width: 93%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.youtube{
+.youtube {
     width: 50%;
     text-align: center;
     align-items: center;
@@ -170,7 +172,7 @@ nav .logo {
     transform: translateY(-6vw);
 }
 
-.discord{
+.discord {
     width: 50%;
     text-align: center;
     align-items: center;
@@ -178,23 +180,23 @@ nav .logo {
     transform: translateY(-6vw);
 }
 
-.socialds{
+.socialds {
     color: #5765ec;
     font-size: 4vw;
     transform: translateX(15vw) translateY(-0.6vw);
 }
 
-.ds{
+.ds {
     height: 5.5vw;
     width: auto;
     margin-right: 0.521vw;
     transform: translateX(4vw) translateY(-2vw);
 }
 
-.butds{
-    color: white;
+.butds {
+    color: black;
     background-color: #5765ec;
-    border: 0.156vw solid #242424;
+    border: 0.156vw solid white;
     text-decoration: none;
     padding: 5px 5px 5px;
     font-size: 1.9vw;
@@ -203,18 +205,78 @@ nav .logo {
     transform: translateX(3vw) translateY(-2vw);
 }
 
-.butds:hover{
+.butds:hover {
     border: 0.156vw solid #5765ec;
     transition-duration: 0.5s;
     box-shadow: 0px 0px 20px #5765ec;
     font-size: 2.1vw;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px black;
 }
 
-.buttonzone1{
+.buttonzone1 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateX(14.5vw) translateY(-1.5vw);
+}
+
+#toggle-container {
+    position: absolute;
+    right: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+#switch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    width: 3vw; /* Dimensioni ridotte */
+    height: 1.5vw; /* Dimensioni ridotte */
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    position: relative;
+    padding: 0 0.2vw; /* Padding for icons */
+    box-sizing: border-box;
+}
+
+.sun, .moon {
+    font-size: 1vw; /* Adjust size as needed */
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 0.15vw; /* Dimensioni ridotte */
+    left: 0.15vw; /* Dimensioni ridotte */
+    width: 1.2vw; /* Dimensioni ridotte */
+    height: 1.2vw; /* Dimensioni ridotte */
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + label {
+    background: #bada55;
+}
+
+input:checked + label:after {
+    left: calc(100% - 0.1vw);
+    transform: translateX(-100%);
+}
+
+input:checked + label .sun {
+    display: none;
+}
+
+input:not(:checked) + label .moon {
+    display: none;
 }
