@@ -97,3 +97,4 @@ var acc = document.getElementsByClassName("accordioncpu");
       }
     });
   }
+  
