@@ -80,9 +80,14 @@ nav #ig img:hover {
 }
 
 #table {
-    margin-top: 1vw;
     position: relative;
-    z-index: 1;
+    transform: translateY(-15vw) translateX(50%);
+    width: fit-content;
+}
+
+#playlist{
+    width: 15vw;
+    text-align: left;
 }
 
 table #title2, #title5 {
